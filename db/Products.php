@@ -18,5 +18,4 @@ $products = [
 ];
 
 
-var_dump($products);
 

@@ -1,8 +1,8 @@
 
 
-<footer>
+<footer class="text-center my-5 py-5 bg-dark ">
 
-<h1>Footer</h1>
+<h3 class="text-white">By Pietro Muresu</h3>
 
 </footer>
 

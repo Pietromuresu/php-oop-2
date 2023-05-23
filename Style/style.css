@@ -6,3 +6,9 @@ header a{
   color: white !important;
 }
 
+
+
+.pm-card-img{
+  min-height: 250px;
+  width: 100%;
+}
