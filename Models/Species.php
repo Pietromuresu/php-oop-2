@@ -1,11 +1,10 @@
 <?php
-include __DIR__ . '/Product.php';
 
-class Species extends Product{
-  protected $species;
 
-  function __construct($_price, $_name, $_species){
-    parent::__construct($_price, $_name);
+class Species{
+  private $species;
+
+  function __construct($_species){
     $this->setSpecies($_species);
 
 
