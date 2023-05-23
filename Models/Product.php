@@ -1,12 +1,14 @@
 <?php
 
 class Product {
-  private $name;
-  private $price;
+  protected $name;
+  protected $price;
 
   function __construct($_name, $_price ){
     $this->setName($_name);
     $this->setPrice($_price);
+
+    
   }
 
 
@@ -20,11 +22,11 @@ class Product {
   }
   
   // Getter
-  public Function getName(){
+  public function getName(){
     return $this->name; 
   }
 
-  public Function getPrice(){
+  public function getPrice(){
     return $this->price ; 
   }
 
