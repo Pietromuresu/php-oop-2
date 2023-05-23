@@ -1,6 +1,6 @@
 <?php
 
-class Prodotto {
+class Product {
   private $name;
   private $price;
 
@@ -30,9 +30,6 @@ class Prodotto {
 
 }
 
-$test  = new Prodotto('test1', '22.1');
 
 
 
-var_dump($test->getName());
-var_dump($test->getPrice());
