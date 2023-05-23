@@ -6,14 +6,15 @@ class Product {
   protected $name;
   protected $price;
   protected $img;
-  protected $species;
+  public $species;
 
 
   function __construct($_name, $_price, $_img, Species $_species ){
     $this->setName($_name);
     $this->setPrice($_price);
     $this->setImg($_img);
-    $this->species = $_species;
+    $this->setSpecies($_species);
+    
 
     
   }
@@ -32,6 +33,10 @@ class Product {
     $this->img = $_img;
   }
 
+  public function setSpecies($_species) {
+    $this->species = $_species;
+  }
+
 
   // Getter
   public function getName(){
@@ -44,6 +49,10 @@ class Product {
   
   public function getImg(){
     return $this->img ; 
+  }
+
+  public function getSpecies() {
+   return $this->species ;
   }
 }
 

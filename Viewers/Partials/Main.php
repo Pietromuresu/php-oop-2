@@ -4,6 +4,7 @@ include_once __DIR__ . '/../../db/products.php';
 
 <main>
 
+  <h1 class="text-center mb-5">Products</h1>
 
   <div class="container">
     <div class="row">
@@ -15,9 +16,14 @@ include_once __DIR__ . '/../../db/products.php';
           <img src="<?php echo 'images/' . $product->getImg() ?>" class="card-img-top" alt="<?php echo  $product->getName() ?>">
         </div>
           <div class="card-body">
-            <h5 class="card-title"><?php echo  $product->getName() ?></h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h4 class="card-title"><?php echo  $product->getName() ?></h4>
+            <p class="card-text"> <?php echo  $product->species->getSpecies() ?></p>
+            <h3 class="card-text"><?php echo  $product->getPrice() ?></h3>
+            <p class="card-text"><?php echo  $product?->getDescription() ?></p>
+            <p class="card-text"><?php echo  $product?->getDimensions() ?></p>
+
+
+            <a href="#" class="btn btn-primary">Add to cart</a>
           </div>
         </div>
       </div>

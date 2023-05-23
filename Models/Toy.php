@@ -14,7 +14,7 @@ class Toy extends Product{
 
 
   public function setDescription($_description) {
-    $this->description = $_description;
+    $this->description = '<strong>Desc:</strong>' . ' ' . $_description;
   }
 
   public function setDimensions($_dimensions) {

@@ -23,7 +23,7 @@ class Species{
         
         break;
       case 'bird':
-        $this->species = '<i class="fa-solid fa-bird"></i>' . ' ' . $_species;
+        $this->species = '<i class="fa-solid fa-crow"></i>' . ' ' . $_species;
         
         break;
       case 'fish':

@@ -8,22 +8,22 @@ class Food extends Product{
 
   function __construct($_name, $_price, $_img , Species $_species , $_weight, $_ingredients){
     parent::__construct($_name, $_price, $_img, $_species );
-    $this->setWeight($_weight);
+    $this->setDescription($_weight);
     $this->setDimensions($_ingredients);
   }
 
 
-  public function setWeight($_weight) {
-    $this->weight = $_weight;
+  public function setDescription($_weight) {
+    $this->weight = '<strong>Net Weight:</strong>' . ' ' . $_weight;
   }
 
   public function setDimensions($_ingredients) {
-    $this->ingredients = $_ingredients;
+    $this->ingredients = '<strong>Ingredients:</strong>' . ' ' . $_ingredients;
   }
 
 
 
-  public function getWeight(){
+  public function getDescription(){
     return $this->weight; 
   }
 

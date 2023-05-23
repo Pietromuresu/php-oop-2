@@ -8,22 +8,22 @@ class Accessory extends Product{
 
   function __construct($_name, $_price, $_img , Species $_species , $_material, $_dimensions){
     parent::__construct($_name, $_price, $_img, $_species);
-    $this->setMaterial($_material);
+    $this->setDescription($_material);
     $this->setDimensions($_dimensions);
   }
 
 
-  public function setMaterial($_material) {
-    $this->material = $_material;
+  public function setDescription($_material) {
+    $this->material = '<strong>Material:</strong>' . ' ' . $_material;
   }
 
   public function setDimensions($_dimensions) {
-    $this->dimensions = $_dimensions;
+    $this->dimensions = '<strong>Dimensions:</strong>' . ' ' . $_dimensions;
   }
 
 
 
-  public function getMaterial(){
+  public function getDescription(){
     return $this->material; 
   }
 
