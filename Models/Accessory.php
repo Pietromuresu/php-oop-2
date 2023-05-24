@@ -8,12 +8,12 @@ class Accessory extends Product{
 
   function __construct($_name, $_price, $_img , Species $_species , $_material, $_dimensions){
     parent::__construct($_name, $_price, $_img, $_species);
-    $this->setDescription($_material);
+    $this->setMaterial($_material);
     $this->setDimensions($_dimensions);
   }
 
 
-  public function setDescription($_material) {
+  public function setMaterial($_material) {
     $this->material = '<strong>Material:</strong>' . ' ' . $_material;
   }
 
@@ -23,7 +23,7 @@ class Accessory extends Product{
 
 
 
-  public function getDescription(){
+  public function getMaterial(){
     return $this->material; 
   }
 

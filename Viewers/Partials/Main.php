@@ -19,11 +19,22 @@ include_once __DIR__ . '/../../db/products.php';
             <h4 class="card-title"><?php echo  $product->getName() ?></h4>
             <p class="card-text"> <?php echo  $product->species->getSpecies() ?></p>
             <h3 class="card-text"><?php echo  $product->getPrice() ?></h3>
-            <p class="card-text"><?php echo  $product?->getDescription() ?></p>
-            <p class="card-text"><?php echo  $product?->getDimensions() ?></p>
+
+            <?php if(get_class($product) == 'Food'): ?>
+              <p class="card-text"><?php echo  $product?->getWeight() ?></p>
+              <p class="card-text"><?php echo  $product?->getIngredients() ?></p>
+            <?php elseif(get_class($product) == 'Accessory'): ?>
+              <p class="card-text"><?php echo  $product?->getMaterial() ?></p>
+              <p class="card-text"><?php echo  $product?->getDimensions() ?></p>
+            <?php elseif(get_class($product) == 'Toy'): ?>
+              <p class="card-text"><?php echo  $product?->getDescription() ?></p>
+              <p class="card-text"><?php echo  $product?->getDimensions() ?></p>
+            <?php endif;?>
+
+                
 
 
-            <a href="#" class="btn btn-primary">Add to cart</a>
+            <a href="#" class="btn btn-dark">Add to cart</a>
           </div>
         </div>
       </div>
